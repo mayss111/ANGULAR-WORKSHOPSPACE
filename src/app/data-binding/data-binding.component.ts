@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-data-binding',
+  templateUrl: './data-binding.component.html',
+  styleUrls: ['./data-binding.component.css']
+})
+export class DataBindingComponent {
+   a:string="bonjour";
+  color:string="red";
+  plc="name";
+  nom=""
+
+  clickMe(){
+    alert("vous avez cliquer")
+  }
+
+}

@@ -23,6 +23,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "styles": [
+              "bootstrap/dist/css/bootstrap.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "bootstrap/dist/js/bootstrap.bundle.js"
+            ],
             "outputPath": "dist/eventhub",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -35,11 +42,7 @@
                 "glob": "**/*",
                 "input": "public"
               }
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+            ]
           },
           "configurations": {
             "production": {
@@ -102,5 +105,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "437faf8d-33ab-4dc3-9a09-4917c026eb95"
   }
 }

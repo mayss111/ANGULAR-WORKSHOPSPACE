@@ -9,13 +9,11 @@ import { TestComponent } from './test/test.component';
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '',redirectTo: '/home', pathMatch: 'full' },
+   { path: 'home', component: HomeComponent },
 
-  { path: 'list', component: ListEventComponent,
-    children: [
-    { path: 'test1', component: TestComponent },
-    { path: 'test2', component: DataBindingComponent },
-]},
+  { path: 'list', component: ListEventComponent},
+    
   { path: '**', component: NotFoundComponent },
 ];
 

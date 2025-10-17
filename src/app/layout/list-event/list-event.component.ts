@@ -9,6 +9,7 @@ import { Event } from '../../models/event';
   styleUrls: ['./list-event.component.css']
 })
 export class ListEventComponent {
+  searchTerm: string = '';
 
   eventlist: Event[] = [
   {
@@ -69,5 +70,11 @@ export class ListEventComponent {
   }
   dateExpire(event:Event){
     return event.date < new Date();
+  }
+  filter(){
+    return this.eventlist.filter(event => 
+      event.titre.toLowerCase().includes(this.searchTerm.toLowerCase())  ||
+      event.lieu.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
   }
 }

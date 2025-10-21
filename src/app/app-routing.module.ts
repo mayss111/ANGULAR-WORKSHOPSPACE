@@ -6,8 +6,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { TestComponent } from './test/test.component';
 
-
-
 const routes: Routes = [
   { path: '',redirectTo: '/home', pathMatch: 'full' },
    { path: 'home', component: HomeComponent },
